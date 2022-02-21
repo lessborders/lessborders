@@ -1,10 +1,11 @@
 <template>
   <div>
-      <metainfo>
-        <template v-slot:title="{ content }">{{ content ? `${content} · less borders` : `less borders` }}</template>
-      </metainfo>
+    <metainfo>
+      <template v-slot:title="{ content }">{{ content ? `${content} · less borders` : `less borders` }}</template>
+    </metainfo>
     <Header/>
     <router-view></router-view>
+    <Footer/>
   </div>
 </template>
 

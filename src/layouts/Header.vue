@@ -9,9 +9,16 @@
       </router-link>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item dropdown has-megamenu">
-            <a class="nav-link dropdown-toggle custom-icon" href="#" data-bs-toggle="dropdown">Services <i class="fa-duotone fa-circle-chevron-down"></i></a>
-            <div class="dropdown-menu megamenu" role="menu">
+          <li v-for="page in pages" :key="page" class="nav-item">
+            <router-link v-if="!page.children" class="nav-link btn btn-transparent" :to="page.link">
+              {{page.name}}
+            </router-link>
+            <div v-if="page.children" class="dropdown has-megamenu">
+              <div class="nav-link dropdown-toggle custom-icon btn btn-transparent" href="#" data-bs-toggle="dropdown">
+                {{page.name}} <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="dropdown-menu megamenu" role="menu">
+              </div>
             </div>
           </li>
         </ul>
@@ -19,13 +26,13 @@
 
       <div class="d-flex">
         <ul class="nav">
-          <li class="nav-item">
+          <li>
             <darkToggle/>
           </li>
-          <li class="nav-item dropdown has-megamenu me-2">
+          <li class="dropdown has-megamenu me-2">
             <productDropdown/>
           </li>
-          <li class="nav-item">
+          <li>
             <div class="btn btn-primary" aria-current="page" href="#">Sign in</div>
           </li>
         </ul>
@@ -35,11 +42,26 @@
 </template>
 
 <script>
+const pages = [
+    {
+        name: "Services",
+        active: 0,
+        children: [
+          {
+            name: "test",
+            link: "/test",
+            active: 0
+          }
+        ]
+    }
+];
+
 export default {
   data() {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      pages: pages
     };
   },
   mounted() {
