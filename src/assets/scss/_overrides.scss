@@ -53,7 +53,6 @@ body {
 }
 
 .navbar {
-    transform: translate3d(0, 0, 0);
     transition: 0.1s all ease-out;
   
     .nav-link {
@@ -76,14 +75,27 @@ body {
 
 .navbar.navbar--hidden {
     box-shadow: none;
-    transform: translate3d(0, -100%, 0);
+    top: -75px;
 }
 
 .dropdown-toggle.custom-icon:after {
   border:none !important;
 }
 
+.nav-link {
+  color: var(--lb-text-color) !important;
+  border-bottom: 1px solid var(--lb-border-color);
+}
+
 .btn-light {
   color: var(--lb-text-color) !important;
 }
 
+.btn-close {
+  color: var(--lb-text-color) !important;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}

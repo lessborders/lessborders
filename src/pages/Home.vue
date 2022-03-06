@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-auto">
+  <div class="page-container mb-auto">
   </div>
 </template>
 

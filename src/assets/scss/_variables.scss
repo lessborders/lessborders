@@ -1,14 +1,15 @@
 :root {
-  --lb-primary: #333;
-  --lb-primary-highlight: #444;
+  --lb-primary: #252525;
+  --lb-primary-highlight: #333;
   
   --lb-light: #f1f1f1;
   --lb-light-highlight: #f6f6f6;
 
   --lb-body-bg: #f1f1f1;
-  --lb-text-color: #222;
+  --lb-text-color: #252525;
   
   --lb-card-bg: #ffff;
+  --lb-border-color: #EEE;
 }
 
 $lb-colors: (
