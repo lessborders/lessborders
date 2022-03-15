@@ -1,10 +1,10 @@
 <template>
-  <div class="page-container mb-auto">
+  <div class="page-container mb-auto legal">
       <div class="container py-4">
         <div>
             <h1>Legal Notice</h1><br>
             <p>
-                <strong>Less Borders e.K.</strong><br>
+                <strong>Less Borders</strong><br>
                 Seidlhofstraße 18<br>
                 80639 Munich<br>
                 Germany<br>
@@ -16,22 +16,25 @@
             </p>
             <p>
                 <strong>Management: </strong>Billie Bell<br>
-                <strong>Commercial registry: </strong>Amtsgericht München<br>
-                <strong>Registriy number: </strong>---<br>
-                <strong>VAT number: </strong>---<br>
+                <strong>VAT number: </strong>181/390/15882<br>
             </p>
             
-            <h2 class="pt-4">Content on lessborders.com</h2>
+            <h2 class="pt-4">Content on the lessborders network</h2>
             <p>
-                The content contained in this website may be supplemented, changed or deleted without prior notice. 
-                Less Borders e.K. expressly reserves the right to temporarily or permanently discontinue publication. 
+                The content contained on the following websites may be supplemented, changed or deleted without prior notice:
+                <ul>
+                  <li>lessborders.com</li>
+                  <li>cloud.lessborders.com</li>
+                  <li>bordfol.io</li>
+                </ul>
+                Less Borders expressly reserves the right to temporarily or permanently discontinue publication. 
                 Our offers are subject to confirmation and are non-binding.
             </p>
 
             <h2 class="pt-3">Liability and warranty disclaimer</h2>
             <p>
                 No guarantee for the timeliness, correctness, completeness or quality of the information contained in the Internet site is assumed. 
-                Less Borders e.K. assumes no liability for the completeness, accuracy and timeliness. 
+                Less Borders assumes no liability for the completeness, accuracy and timeliness. 
                 All information is intended solely for the information of visitors to this site and the offers contained herein. 
                 Moreover, the liability is limited to intent and gross negligence. 
                 Liability for consequential damages and lost profits is excluded for slight negligence.
@@ -39,7 +42,7 @@
             
             <h2 class="pt-3">Disclaimer for references and links</h2>
             <p>
-                Less Borders e.K. distances itself explicitly from the contents in the scope of its offer made available by external websites by hyperlink or in any other way. 
+                Less Borders distances itself explicitly from the contents in the scope of its offer made available by external websites by hyperlink or in any other way. 
                 We have no control over the content of these sites and therefore can assume no warranty for the correctness, legality, completeness or availability of external content. 
                 We hereby expressly distance ourselves from any and all content of all linked pages of third parties and do not claim their content as our own. This declaration 
                 applies to all links and for all contents of pages to which the links lead. 
@@ -77,7 +80,7 @@
     setup () {
       useMeta({
         title: 'Legal Notice',
-        description : 'Less Borders e.K. - Management: Billie Bell - Office: Seidlhofstraße 18, 80639 Munich, Germany - Contact: service@lessborders.com',
+        description : 'Less Borders - Management: Billie Bell - Office: Seidlhofstraße 18, 80639 Munich, Germany - Contact: service@lessborders.com',
       })
     },
     name: "Legal Notice"

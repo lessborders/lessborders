@@ -20,12 +20,12 @@ export const router = createRouter({
       component: LegalNotice,
     },
     {
-      path: "/privacy",
+      path: "/legal/privacy",
       name: "privacy",
       component: PrivacyPolicy,
     },
     {
-      path: "/terms",
+      path: "/legal/terms",
       name: "terms",
       component: TermsService,
     },

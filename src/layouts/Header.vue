@@ -4,8 +4,9 @@
     class="navbar navbar-expand-lg sticky-top"
     :class="{ 'navbar--hidden': !showNavbar, 'navbar--scrolled': scrolledNavbar }">
       <div class="container">
-        <router-link class="navbar-brand" to="/">
+        <router-link class="navbar-brand me-2 me-lg-3" to="/">
           <img class="invert-dark logo" height="48" width="48" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
+          <span class="h6 d-none"> &nbsp;<span class="text-gradient">Less Borders</span></span>
         </router-link>
 
         <!-- Desktop Menu -->
@@ -28,7 +29,7 @@
 
         <!-- Mobile Toggle -->
         <a class="btn btn-transparent me-auto d-lg-none px-3 mobileMenuToggle custom-icon">
-              <i class="fa-duotone fa-grid-2"></i>
+              <i class="fa-duotone fa-bars-sort fa-lg"></i>
         </a>
 
         <!-- Right Menu -->
@@ -41,7 +42,9 @@
               <productDropdown/>
             </li>-->
             <li class="ms-2">
-              <div class="btn btn-primary" aria-current="page" href="#">Sign in</div>
+              <div class="btn btn-primary" aria-current="page" href="#">
+                  <i class="fa-duotone fa-user-alien"></i> <div class=" ps-2 d-none d-sm-inline">Sign in</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -57,7 +60,7 @@
         </h6>
         <button type="button" class="btn btn-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fa-lg"></i></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas-body p-0">
         <ul id="mobileMenuList" class="nav flex-column" style="list-style: none;">
             <li v-for="page in pages" :key="page">
               <router-link v-if="!page.children" class="nav-link mobileMenuToggle h5" :to="page.link">

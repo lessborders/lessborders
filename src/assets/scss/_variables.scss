@@ -4,17 +4,20 @@
   
   --lb-light: #f1f1f1;
   --lb-light-highlight: #f6f6f6;
-
-  --lb-body-bg: #f1f1f1;
-  --lb-text-color: #252525;
   
-  --lb-card-bg: #ffff;
-  --lb-border-color: #EEE;
+  --lb-link-color: var(--lb-primary);
+  --lb-link-highlight-color: var(--lb-primary);
 }
 
 $lb-colors: (
   "primary": --lb-primary,
   "light": --lb-light,
+  "red": --lb-red,
+  "purple": --lb-purple,
+  "blue": --lb-blue,
+  "green": --lb-green,
+  "orange": --lb-orange,
+  "black": --lb-bacl,
   "body": --lb-text-color,
   "transparent": transparent
 );

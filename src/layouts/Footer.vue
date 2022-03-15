@@ -31,17 +31,17 @@
                         <h6 class="footer-header">Legal</h6>
                         <ul class="list-style-none">
                             <li>                             
-                                <router-link to="/legal">
+                                <router-link :to="{ name: 'legal' }">
                                     Legal notice
                                 </router-link>
                             </li>
                             <li>             
-                                <router-link to="/terms">
+                                <router-link :to="{ name: 'terms' }">
                                     Terms of service
                                 </router-link>
                             </li>
                             <li>             
-                                <router-link to="/privacy">
+                                <router-link :to="{ name: 'privacy' }">
                                     Privacy policy
                                 </router-link>
                             </li>

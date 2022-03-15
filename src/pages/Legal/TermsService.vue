@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container mb-auto">
+  <div class="page-container mb-auto legal">
       <div class="container py-4">
         <div>
             <h1>Terms of Service</h1>
@@ -7,7 +7,7 @@
             <h2 class="pt-3">1. AGREEMENT TO TERMS</h2>
             <p>
                 These Terms of Use constitute a legally binding agreement made between you,
-                whether personally or on behalf of an entity (“you”) and Less Borders e.K., doing
+                whether personally or on behalf of an entity (“you”) and Less Borders, doing
                 business as Less Borders ("Less Borders", “we”, “us”, or “our”), concerning your
                 access to and use of the lessborders.com website as well as any other media form,
                 media channel, mobile website or mobile application related, linked, or otherwise
@@ -633,7 +633,7 @@
                 and the use of the United Nations Convention of Contracts for the International Sale
                 of Goods is expressly excluded. If your habitual residence is in the EU, and you are a
                 consumer, you additionally possess the protection provided to you by obligatory
-                provisions of the law of your country of residence. Less Borders e.K. and yourself
+                provisions of the law of your country of residence. Less Borders and yourself
                 both agree to submit to the non-exclusive jurisdiction of the courts of Munich, which
                 means that you may make a claim to defend your consumer protection rights in
                 regards to these Conditions of Use in Germany, or in the EU country in which you
@@ -835,7 +835,7 @@
             </p>
 
             <p>
-                <strong>Less Borders e.K.</strong><br>
+                <strong>Less Borders</strong><br>
                 Seidlhofstraße 18<br>
                 Munich, Bavaria<br>
                 80639 Germany<br>
