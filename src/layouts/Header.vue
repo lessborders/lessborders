@@ -5,8 +5,8 @@
     :class="{ 'navbar--hidden': !showNavbar, 'navbar--scrolled': scrolledNavbar }">
       <div class="container">
         <router-link class="navbar-brand me-2 me-lg-3" to="/">
-          <img class="invert-dark logo" height="48" width="48" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
-          <span class="h6 d-none"> &nbsp;<span class="text-gradient">Less Borders</span></span>
+          <img class="invert-dark logo" height="44" width="44" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
+          <span class="h6 d-none d-md-inline-block ms-2"> <span class="text-text">Less Borders</span></span>
         </router-link>
 
         <!-- Desktop Menu -->
@@ -29,7 +29,7 @@
 
         <!-- Mobile Toggle -->
         <a class="btn btn-transparent me-auto d-lg-none px-3 mobileMenuToggle custom-icon">
-              <i class="fa-duotone fa-bars-sort fa-lg"></i>
+              <i class="fa-solid fa-bars"></i>
         </a>
 
         <!-- Right Menu -->
@@ -41,9 +41,9 @@
             <!--<li class="dropdown has-megamenu">
               <productDropdown/>
             </li>-->
-            <li class="ms-2">
-              <router-link class="btn btn-primary" aria-current="page" :to="{ name: 'login' }">
-                <i class="fa-duotone fa-user-alien"></i> <div class=" ps-2 d-none d-sm-inline">Sign in</div>
+            <li>
+              <router-link class="btn btn-transparent" aria-current="page" :to="{ name: 'login' }">
+                <div>Sign in</div>
               </router-link>
             </li>
           </ul>
