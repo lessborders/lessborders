@@ -29,6 +29,15 @@ export default defineNuxtConfig({
     // js
     script: [
       { src: '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' },
+      {
+        hid: 'gtm',
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WMKMN4V');`,
+        type: 'text/javascript',
+      },
     ],
   },
 
@@ -36,7 +45,7 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/styles.scss'],
 
   // plugins
-  plugins: ['~/plugins/navbar.ts'],
+  plugins: ['~/plugins/routeChange.ts'],
 
   // build
   build: {

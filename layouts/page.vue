@@ -25,7 +25,18 @@ if (!route.meta.title) {
   route.meta.title = 'Services for startups, professionals and creators'
 }
 
+console.log(route.meta)
+
 useMeta({
   title: computed(() => `${route.meta.title} - Less Borders Media Agency`),
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        route.meta.description ||
+        'Less Borders is making it easier for startups, creators and entrepreneurs by providing services and tools to help deliver projects.',
+    },
+  ],
 })
 </script>

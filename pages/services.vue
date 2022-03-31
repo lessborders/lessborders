@@ -6,5 +6,6 @@
 definePageMeta({
   layout: 'page',
   title: 'Services',
+  description: 'Check out services and tools from Less Borders',
 })
 </script>

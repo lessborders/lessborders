@@ -7,7 +7,7 @@
           <NuxtLink 
             tag="a"
             :to="{ name: 'index' }"
-            class="navbar-brand me-2 me-lg-3"
+            class="navbar-brand me-2 me-lg-3 d-flex"
           >
             <img
               class="invert-dark logo"
@@ -16,7 +16,7 @@
               alt="Less Borders Logo"
               src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
             />
-            <span class="h6 d-none d-md-inline-block ms-3">
+            <span class="h6 d-none d-md-inline-block ms-3 my-auto">
               <span class="text-text">{{ app.name }}</span>
             </span>
           </NuxtLink>
@@ -35,7 +35,7 @@ const app = useState<IApp>('app')
 const navbar = ref(null)
 
 onMounted(() => {
-  const { onScroll } = useSticky(navbar.value, 0)
+  const { onScroll } = useSticky(navbar.value, 70)
   setTimeout(() => onScroll(), 50)
 })
 </script>
