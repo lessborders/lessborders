@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     ],
     // js
     script: [
-      { src: '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' },
+      { src: 'https://static.lessborders.com/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' },
       {
         hid: 'gtm',
         children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
