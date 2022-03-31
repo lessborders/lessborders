@@ -1,7 +1,5 @@
 import { defineNuxtConfig } from 'nuxt3'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
-import UnpluginComponentsVite from 'unplugin-vue-components/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
@@ -49,8 +47,6 @@ export default defineNuxtConfig({
   buildModules: [
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
-    'unplugin-icons/nuxt',
-    '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
   ],
@@ -60,16 +56,7 @@ export default defineNuxtConfig({
 
   // vite plugins
   vite: {
-    plugins: [
-      UnpluginComponentsVite({
-        dts: true,
-        resolvers: [
-          IconsResolver({
-            prefix: 'Icon',
-          }),
-        ],
-      }),
-    ],
+    plugins: [],
   },
 
   // localization - i18n config
