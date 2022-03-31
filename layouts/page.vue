@@ -28,7 +28,7 @@ if (!route.meta.title) {
 console.log(route.meta)
 
 useMeta({
-  title: computed(() => `${route.meta.title} - Less Borders Media Agency`),
+  title: computed(() => `${route.meta.title} · Less Borders Media Agency`),
   meta: [
     {
       hid: 'description',
