@@ -1,5 +1,5 @@
 :root {
-  --lb-primary: #252525;
+  --lb-primary: var(--lb-black);
   --lb-primary-highlight: #333;
   
   --lb-light: #f1f1f1;
@@ -7,6 +7,8 @@
   
   --lb-link-color: var(--lb-primary);
   --lb-link-highlight-color: var(--lb-primary);
+
+  --lb-input-border: #D8D8D8;
 }
 
 $lb-colors: (

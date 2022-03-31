@@ -15,7 +15,6 @@ import productDropdown from "./components/productDropdown.vue";
 import App from "./App.vue";
 
 import './assets/scss/styles.scss';
-import "bootstrap";
 
 const app = createApp(App);
 

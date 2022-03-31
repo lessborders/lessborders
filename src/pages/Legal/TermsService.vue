@@ -3,6 +3,10 @@
       <div class="container py-4">
         <div>
             <h1>Terms of Service</h1>
+            <p>
+              Phone: +49 (0)176 8344 1249<br />
+              E-Mail: service@lessborders.com
+            </p>
             
             <h2 class="pt-3">1. AGREEMENT TO TERMS</h2>
             <p>
@@ -555,7 +559,7 @@
             <h2 class="pt-3">17. PRIVACY POLICY</h2>
             <p>
                 We care about data privacy and security. Please review our Privacy Policy: 
-                <router-link to="/privacy">https://lessborders.com/privacy</router-link>
+                <router-link :to="{ name: 'privacy' }">https://lessborders.com/legal/privacy</router-link>
                 By using the Site, you agree to be bound by our Privacy Policy, which is incorporated
                 into these Terms of Use. Please be advised the Site is hosted in Germany. If you
                 access the Site from any other region of the world with laws or other requirements

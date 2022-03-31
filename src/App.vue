@@ -1,12 +1,12 @@
 <template>
   <div>
     <metainfo>
-      <template v-slot:title="{ content }">{{ content ? `${content} · less borders` : `less borders` }}</template>
+      <template v-slot:title="{ content }">{{ content ? `${content} · Less Borders Media Agency` : `Less Borders Media Agency` }}</template>
     </metainfo>
     <Header/>
-    <div id="page" class="d-flex col mx-auto">
+    <main id="page" class="d-flex col mx-auto">
       <router-view></router-view>
-    </div>
+    </main>
     <Footer/>
   </div>
 </template>
@@ -18,7 +18,7 @@
   export default {
     setup () {
       useMeta({
-        title: 'Startup and career solutions for professionals - work smarter',
+        title: 'Services for startups, professionals and creators',
         description : 'Less Borders is making it easier for startups, creators and entrepreneurs by providing services and tools to help deliver projects.',
         htmlAttrs: { lang: 'en', amp: true }
       })

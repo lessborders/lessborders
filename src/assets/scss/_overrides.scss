@@ -5,6 +5,7 @@
     border-color: transparent !important;
     transition: border-radius 0.15s linear;
     color: #FFF;
+    line-height: 1.75;
     
     &:hover {
       background-color: var(#{$value}-highlight) !important;
@@ -32,6 +33,15 @@
     text-decoration: none;
   }
 }
+@each $color, $value in $lb-colors {
+  .link-#{$color} {
+    color: var(#{$value}) !important;
+
+    &:hover {
+      color: var(#{$value}-highlight);
+    }
+  }
+}
 
 @each $color, $value in $lb-colors {
   .bg-#{$color} {
@@ -43,7 +53,6 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   background-color: var(--lb-body-bg);
   color: var(--lb-text-color);
-  transition:background-color 0.2s linear;
   word-break: break-word;
 }
 
@@ -69,7 +78,6 @@ a {
 
 .card-bg, .card {
   background-color: var(--lb-card-bg);
-  transition: background-color 0.15s linear;
 }
 
 .table {
@@ -94,16 +102,43 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.borderless {
+  border: none;
+}
+
+.borderless.input-group {
+  label,
+  input {
+    border: none;
+  }
+}
+
+.offcanvas {
+  .nav-link {
+    padding: 0.75rem 1rem;
+
+    &:hover, &.show {
+      background-color: var(--lb-light-highlight);
+    }
+  }
+}
+
 .navbar {
-  transition: 0.1s all ease-out;
-  border-bottom: 1px solid var(--lb-border-color);
+  transition: 0.2s top ease-out;
   box-shadow: var(--lb-box-shadow);
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .navbar-brand {
+    padding: 0;
+  }
 
   .nav-link {
-    padding-right: 0.75rem !important;
-    padding-left: 0.75rem !important;
+    padding: 1.25rem 1rem !important;
+
+    &:hover {
+      background-color: var(--lb-light-highlight);
+    }
   }
 
   .has-megamenu{
@@ -130,7 +165,6 @@ a {
 
 .nav-link {
   color: var(--lb-text-color) !important;
-  border-bottom: 1px solid var(--lb-border-color);
   margin-bottom: 0;
 }
 
@@ -156,14 +190,15 @@ a {
 .form-control, .input-group-text {
   background: var(--lb-input-bg);
   color: var(--lb-text-color);
-  border-color: var(--lb-border-color);
+  border-color: var(--lb-input-border);
   box-shadow: none !important;
+  transition: border-color 0s linear;
 }
 
 .form-control:hover, .form-control:focus {
   background: var(--lb-input-bg);
   color: var(--lb-text-color);
-  border-color: var(--lb-border-color);
+  border-color: var(--lb-input-border);
 }
 
 .input-group-text, .form-control::placeholder {

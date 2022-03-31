@@ -5,19 +5,19 @@
     :class="{ 'navbar--hidden': !showNavbar, 'navbar--scrolled': scrolledNavbar }">
       <div class="container">
         <router-link class="navbar-brand me-2 me-lg-3" to="/">
-          <img class="invert-dark logo" height="44" width="44" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
-          <span class="h6 d-none d-md-inline-block ms-2"> <span class="text-text">Less Borders</span></span>
+          <img class="invert-dark logo" height="42" width="42" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
+          <span class="h6 d-none d-md-inline-block ms-3"> <span class="text-text">Less Borders</span></span>
         </router-link>
 
         <!-- Desktop Menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li v-for="page in pages" :key="page" class="nav-item ms-1 me-1">
-              <router-link v-if="!page.children" class="nav-link btn btn-transparent" :to="page.link">
+              <router-link v-if="!page.children" class="nav-link" :to="page.link">
                 {{page.name}}
               </router-link>
               <div v-if="page.children" class="dropdown has-megamenu">
-                <div class="nav-link dropdown-toggle custom-icon icon-right btn btn-transparent" href="#" data-bs-toggle="dropdown">
+                <div class="nav-link dropdown-toggle custom-icon icon-right nav-link" href="#" data-bs-toggle="dropdown">
                   {{page.name}} <i class="fa-solid fa-angle-down"></i>
                 </div>
                 <div class="dropdown-menu megamenu" role="menu">
@@ -28,26 +28,18 @@
         </div>
 
         <!-- Mobile Toggle -->
-        <a class="btn btn-transparent me-auto d-lg-none px-3 mobileMenuToggle custom-icon">
+        <a class="btn btn-transparent me-auto d-lg-none px-3 mobileMenuToggle custom-icon" rel="nofollow">
               <i class="fa-solid fa-bars"></i>
         </a>
-
-        <!-- Right Menu -->
-        <div class="d-flex">
-          <ul class="nav">
-            <li>
-              <darkToggle/>
-            </li>
-            <!--<li class="dropdown has-megamenu">
-              <productDropdown/>
-            </li>-->
-            <li>
-              <router-link class="btn btn-transparent" aria-current="page" :to="{ name: 'login' }">
-                <div>Sign in</div>
-              </router-link>
-            </li>
-          </ul>
-        </div>
+        
+        <darkToggle/>
+        <ul class="nav">
+          <li>
+            <router-link class="nav-link" aria-current="page" :to="{ name: 'login' }">
+              Sign in
+            </router-link>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -55,7 +47,7 @@
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
       <div class="offcanvas-header">
         <h6 class="offcanvas-title" id="mobileMenuLabel">
-          <img class="invert-dark logo" height="48" width="48" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
+          <img class="invert-dark logo" height="42" width="42" alt="Less Borders Logo" src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"/>
           &nbsp;Less Borders
         </h6>
         <button type="button" class="btn btn-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark fa-lg"></i></button>
@@ -63,7 +55,7 @@
       <div class="offcanvas-body p-0">
         <ul id="mobileMenuList" class="nav flex-column" style="list-style: none;">
             <li v-for="page in pages" :key="page">
-              <router-link v-if="!page.children" class="nav-link mobileMenuToggle h5" :to="page.link">
+              <router-link v-if="!page.children" class="nav-link mobileMenuToggle" :to="page.link">
                 {{page.name}}
               </router-link>
               <div v-if="page.children">

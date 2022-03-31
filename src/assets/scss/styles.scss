@@ -46,6 +46,7 @@
 html, body, #app {
   height: 100%;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 #app > div {
@@ -68,7 +69,7 @@ html, body, #app {
 }
 
 .btn-transparent:hover, .btn-transparent.active, .btn-transparent.show {
-  background-color: var(--lb-light);
+  background-color: var(--lb-light-highlight);
 }
 
 #copyright {
@@ -111,7 +112,7 @@ footer {
 }
 
 .page-container {
-  padding-top: 63px;
+  padding-top: 57px;
 
   &.full-page {
     padding-top: 0;
@@ -173,4 +174,9 @@ footer {
   .page-container {
     width: 100%;
   }
+}
+
+.legal h2 {
+  border-top: 1px solid var(--lb-meta-color);
+  margin-top: 2rem;
 }

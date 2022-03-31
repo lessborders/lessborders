@@ -8,7 +8,7 @@
                 <div class="row">
                     <div v-for="product in products" :key="product" class="col-6 text-center">
                         <a class="btn btn-transparent px-2 py-4 d-block h-full" :href="product.link" :class="{ 'active' : product.active == 1}">
-                        <img class="logo" height="48" width="48" alt="Bordfolio Logo" :src="product.image"/>
+                        <img class="logo" height="42" width="42" alt="Bordfolio Logo" :src="product.image"/>
                         <small class="d-block mt-2">{{ product.name }}</small>
                         </a>
                     </div>
