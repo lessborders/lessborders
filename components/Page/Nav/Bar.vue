@@ -1,19 +1,16 @@
 <template>
-  <BuilderNavbar>
+  <PageBuilderNavbar>
     <template #menu>
       <div id="navbarNav" class="d-none d-lg-block">
         <!-- Desktop Menu -->
         <ul class="navbar-nav me-auto">
-          <li v-for="(item, i) in menus" :key="i" class="nav-item mx-1">
-            <Anchor
-              v-if="item.type === 'link' && !item.children"
-              :to="item.route ? item.route : undefined"
-              :href="item.href ? item.href : undefined"
-              class="nav-link"
-            >
-              <span>{{ item.text }}</span>
-            </Anchor>
-          </li>
+          <PageNavLink
+            v-for="(item, i) in menus"
+            :key="i"
+            :item="item"
+            class="nav-item"
+            classes="nav-link"
+          />
         </ul>
       </div>
 
@@ -25,7 +22,7 @@
         <i class="fa-solid fa-bars"></i>
       </a>
 
-      <ul class="nav ms-auto">
+      <ul class="navbar-nav ms-auto">
         <li>
           <NuxtLink
             class="nav-link"
@@ -77,22 +74,18 @@
             class="nav flex-column"
             style="list-style: none"
           >
-            <li v-for="(item, i) in menus" :key="i">
-              <Anchor
-                v-if="item.type === 'link' && !item.children"
-                :to="item.route ? item.route : undefined"
-                :href="item.href ? item.href : undefined"
-                class="dropdown-item mobileMenuToggle"
-              >
-                {{ item.text }}
-              </Anchor>
-            </li>
+            <PageNavLink
+              v-for="(item, i) in menus"
+              :key="i"
+              :item="item"
+              mobile
+              classes="dropdown-item"
+            />
           </ul>
         </div>
       </div>
-
     </template>
-  </BuilderNavbar>
+  </PageBuilderNavbar>
 </template>
 
 <script lang="ts" setup>
@@ -101,16 +94,11 @@ import { IApp } from '~/utils/app'
 export interface IMenuItem {
   type: 'link' | 'button'
   text: string
+  icon?: string
   href?: any
   route?: any
   active?: boolean
-  children?: {
-    type: 'link' | 'button'
-    text: string
-    href?: any
-    route?: any
-    active: boolean
-  }
+  children?: any
 }
 
 const { t } = useLang()
@@ -118,8 +106,23 @@ const { t } = useLang()
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
-    text: t('pages.services.nav'),
-    route: { name: 'services' },
+    text: t('pages.services.branding.nav'),
+    route: { name: 'services-branding' },
+  },
+  {
+    type: 'link',
+    text: t('pages.services.websites.nav'),
+    route: { name: 'services-websites' },
+  },
+  {
+    type: 'link',
+    text: t('pages.services.design.nav'),
+    route: { name: 'services-design' },
+  },
+  {
+    type: 'link',
+    text: t('pages.services.media.nav'),
+    route: { name: 'services-media' },
   },
 ])
 </script>

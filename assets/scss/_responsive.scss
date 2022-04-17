@@ -27,8 +27,12 @@
 
 @media only screen and (min-width: 992px) {
     .navbar {
-        .nav-link {
-            padding: 1.5rem 1rem !important;
+        .navbar-nav {
+            flex-direction:row;
+            
+            .nav-link {
+                padding: 1.5rem 1rem !important;
+            }
         }
     }
     

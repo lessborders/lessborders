@@ -13,18 +13,18 @@ export default defineNuxtRouteMiddleware((to, from) => {
       }
       let toFullPath = new URL(to.fullPath, window.location.href).href
       let overridePrev = false
-      if (to.name == 'auth-login' || to.name == 'auth-register') {
+      if (to.name === 'auth-login' || to.name === 'auth-register') {
         toFullPath = new URL(from.fullPath, window.location.href).href
         overridePrev = true
       }
       const fromFullPath = new URL(from.fullPath, window.location.href).href
       let newUrl = cloudBaseUrl + '/auth/signin/?redirectUrl=' + toFullPath
-      if(toFullPath != fromFullPath || overridePrev) {
+      if (toFullPath !== fromFullPath || overridePrev) {
         newUrl += '&previousUrl=' + fromFullPath
       }
       window.location.href = newUrl
       return navigateTo(from.fullPath)
     }
   }
-  console.log(to, from)
+  // console.log(to, from)
 })

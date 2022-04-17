@@ -18,7 +18,20 @@ pages:
     title: Startseite
   services:
     nav: Leistungen
-    title: Leistungen
+    title: Sie sind in guten Händen
+    intro: Erstklassigen, qualitativ hochwertigen Dienstleistungen, um Ihr Projekt auf den Weg zu bringen
+    branding:
+      nav: Branding
+      title: Marketing & Branding
+    design:
+      nav: Design
+      title: Design
+    media:
+      nav: Medien
+      title: Digitale Medien
+    websites:
+      nav: Webseiten
+      title: Webentwicklung
   login:
     nav: Einloggen
   contact:

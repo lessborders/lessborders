@@ -1,10 +1,10 @@
 <template>
-  <nav ref="navbar" id="navigation">
+  <nav id="navigation" ref="navbar">
     <div class="navbar sticky-top">
       <div class="container">
         <!-- title -->
         <slot name="title">
-          <NuxtLink 
+          <NuxtLink
             tag="a"
             :to="{ name: 'index' }"
             class="navbar-brand me-2 me-lg-3 d-flex"

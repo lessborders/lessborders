@@ -1,7 +1,5 @@
 <template>
-  <div class="page-container mb-auto legal">
-    <NuxtChild  />
-      <div class="container py-5">
+    <div class="container py-5">
         <div>
             <h1>{{ $t('pages.legal.title') }}</h1><br>
             <p>
@@ -24,9 +22,9 @@
             <p>
                 The content contained on the following websites may be supplemented, changed or deleted without prior notice:
                 <ul>
-                  <li>lessborders.com</li>
-                  <li>cloud.lessborders.com</li>
-                  <li>bordfol.io</li>
+                    <li>lessborders.com</li>
+                    <li>cloud.lessborders.com</li>
+                    <li>bordfol.io</li>
                 </ul>
                 Less Borders expressly reserves the right to temporarily or permanently discontinue publication. 
                 Our offers are subject to confirmation and are non-binding.
@@ -70,8 +68,7 @@
                 Any use is subject to permission of the entitled person.
             </p>
         </div>
-      </div>
-  </div>
+    </div>
 </template>
 
 <script lang="ts" setup>

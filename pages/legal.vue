@@ -1,13 +1,11 @@
 <template>
-  <div class="page-container my-auto">
-    <div class="container py-5">
-    </div>
+  <div class="page-container my-auto legal">
+    <NuxtChild />
   </div>
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
   layout: 'page',
-  title: 'Contact',
 })
 </script>

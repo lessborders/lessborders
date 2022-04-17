@@ -1,5 +1,9 @@
 <template>
-  <div></div>
+  <div class="page-container my-auto">
+      <div class="hero">
+ 
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>

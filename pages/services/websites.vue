@@ -1,13 +1,11 @@
 <template>
-  <div class="page-container my-auto">
-    <NuxtChild />
-  </div>
+    <div></div>
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
   layout: 'page',
-  title: 'Services',
+  title: 'Web Development',
   description: 'Check out services and tools from Less Borders',
 })
 </script>

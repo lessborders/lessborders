@@ -18,8 +18,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "postcss-loader": "^6.2.1",
-    "bootstrap": "5.1.3"
+    "bootstrap": "^5.1.3",
+    "bootstrap-vue-3": "^0.1.9",
+    "postcss-loader": "^6.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",

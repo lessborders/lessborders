@@ -12,7 +12,6 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 @import "_overrides.scss";
-@import "_responsive.scss";
 
 .custom-icon > i {
   display: inline-block;
@@ -89,23 +88,8 @@ footer {
   a {
     color: #999;
     text-decoration: none;
-    
-    &:hover {
-      color: var(--lb-text-color);
-    }
   }
 }
-
-.sticky-top {
-  position: fixed;
-  left: 0;
-  right: 0;
-  background-color: var(--lb-card-bg);
-
-  &.navbar--scrolled {
-  }
-}
-
 .page-container {
   padding-top: 57px;
 
@@ -204,3 +188,15 @@ footer {
   transform: translateY(-20px);
   opacity: 0;
 }
+
+.hero {
+  min-height: 50vh;
+  display: flex;
+}
+.card-icon {
+  text-align: center;
+  padding: 2rem 2rem 1rem;
+  font-size: 4rem;
+}
+
+@import "_responsive.scss";

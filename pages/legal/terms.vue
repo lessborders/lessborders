@@ -1,11 +1,10 @@
 <template>
-  <div class="page-container mb-auto legal">
-      <div class="container py-5">
+    <div class="container py-5">
         <div>
             <h1>{{ $t('pages.legal.terms.title') }}</h1><br>
             <p>
-              Phone: +49 (0)176 8344 1249<br />
-              Email: service@lessborders.com
+                Phone: +49 (0)176 8344 1249<br />
+                Email: service@lessborders.com
             </p>
             
             <h2 class="pt-3">1. AGREEMENT TO TERMS</h2>
@@ -849,8 +848,7 @@
                 Email: admin@lessborders.com
             </p>
         </div>
-      </div>
-  </div>
+    </div>
 </template>
 
 <script lang="ts" setup>

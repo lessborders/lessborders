@@ -18,7 +18,20 @@ pages:
     title: Homepage
   services:
     nav: Services
-    title: Services
+    title: You're in good hands
+    intro: First-class, quality services to help your project get off the ground
+    branding:
+      nav: Branding
+      title: Brand & Marketing
+    design:
+      nav: Design
+      title: Graphics & Design
+    media:
+      nav: Media
+      title: Digital Media
+    websites:
+      nav: Websites
+      title: Web Development
   login:
     nav: Sign in
   contact:
