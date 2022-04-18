@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div id="footer" class="card-bg pt-5 pb-3">
+    <div id="footer" class="pt-5 pb-3">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-lg-3 mb-4">
@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    <div id="copyright" class="card-bg">
+    <div id="copyright">
       <div class="container pt-3 pb-4">
         <div class="row">
           <div class="col-12 text-center">

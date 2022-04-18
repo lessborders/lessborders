@@ -149,6 +149,7 @@ nav {
 
   &.sticky {
     .navbar {
+      box-shadow: var(--lb-box-shadow);
 
       &:not(.navbar--hidden) {
       }
@@ -159,18 +160,17 @@ nav {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: var(--lb-card-bg);
-    box-shadow: var(--lb-box-shadow);
+    background-color: var(--lb-body-bg);
     transition: 0.2s top ease-out;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 
     .navbar-brand {
       padding: 0;
     }
 
     .nav-link {
-      transition: none;
+      padding: .5rem 1.25rem;
       &:hover,
       &.router-link-active {
         background-color: var(--lb-light-highlight);
@@ -275,7 +275,7 @@ hr {
   &:active,
   &.router-link-active,
   &.active { 
-    background-color: var(--lb-light-highlight);
+    background-color: var(--lb-light);
     color: var(--lb-text-color);
   }
 

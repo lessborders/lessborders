@@ -9,7 +9,7 @@
             :key="i"
             :item="item"
             class="nav-item"
-            classes="nav-link"
+            classes="nav-link btn btn-transparent mx-1"
           />
         </ul>
       </div>
@@ -25,7 +25,7 @@
       <ul class="navbar-nav ms-auto">
         <li>
           <NuxtLink
-            class="nav-link"
+            class="nav-link btn btn-transparent"
             aria-current="page"
             :to="{ name: 'auth-login' }"
           >

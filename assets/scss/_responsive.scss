@@ -18,7 +18,7 @@
 }
 
 @media only screen and (max-width: 992px) { 
-    .navbar {
+    .offcanvas {
         .nav-link {
             padding: 1.25rem 1rem !important;
         }
@@ -31,13 +31,8 @@
             flex-direction:row;
             
             .nav-link {
-                padding: 1.5rem 1rem !important;
             }
         }
-    }
-    
-    .page-container {
-        padding-top: 67px;
     }
     .offcanvas .offcanvas-header {
         padding: 0.8rem 1rem;

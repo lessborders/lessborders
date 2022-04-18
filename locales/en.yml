@@ -46,3 +46,8 @@ pages:
     privacy:
       nav: Privacy policy
       title: Data protection declaration of
+errors:
+  back: "Take me back!"
+  404:
+    title: "Uh oh! You're lost."
+    description: "The page you are looking for does not exist or has been moved. Don't worry - just click the button below to go back."
