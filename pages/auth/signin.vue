@@ -8,4 +8,3 @@ definePageMeta({
   layout: 'page',
 })
 </script>
-

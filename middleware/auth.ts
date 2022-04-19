@@ -13,7 +13,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
       }
       let toFullPath = new URL(to.fullPath, window.location.href).href
       let overridePrev = false
-      if (to.name === 'auth-login' || to.name === 'auth-register') {
+      if (to.name === 'auth-signin' || to.name === 'auth-signup') {
         toFullPath = new URL(from.fullPath, window.location.href).href
         overridePrev = true
       }

@@ -1,11 +1,10 @@
 <template>
-  <div class="page-container legal">
-    <NuxtChild />
-  </div>
+  <div></div>
 </template>
 
 <script lang="ts" setup>
 definePageMeta({
+  middleware: 'auth',
   layout: 'page',
 })
 </script>

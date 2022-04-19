@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5">
+  <v-container class="py-5">
     <div>
       <h1>{{ $t('pages.legal.privacy.title') }}</h1>
       <br />
@@ -391,7 +391,7 @@
 
       <p>Status: March 2022</p>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts" setup>

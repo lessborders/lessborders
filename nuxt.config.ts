@@ -29,9 +29,6 @@ export default defineNuxtConfig({
     // js
     script: [
       {
-        src: 'https://static.lessborders.com/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
-      },
-      {
         hid: 'gtm',
         children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -44,14 +41,14 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: ['~/assets/scss/styles.scss'],
+  css: ['vuetify/lib/styles/main.sass', '~/assets/scss/styles.scss'],
 
   // plugins
   plugins: ['~/plugins/routeChange.ts'],
 
   // build
   build: {
-    transpile: ['@headlessui/vue'],
+    transpile: ['@headlessui/vue', 'vuetify'],
   },
 
   // build modules
@@ -67,6 +64,9 @@ export default defineNuxtConfig({
 
   // vite plugins
   vite: {
+    define: {
+      'process.env.DEBUG': 'false',
+    },
     plugins: [],
   },
 

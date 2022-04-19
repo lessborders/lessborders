@@ -1,5 +1,5 @@
 <template>
-  <section class="container py-3 py-md-4">
+  <v-container class="py-3 py-md-4">
     <slot />
-  </section>
+  </v-container>
 </template>
