@@ -1,13 +1,19 @@
+import { useIdentity } from '~/stores/identity'
+const identity = useIdentity()
+
 export default defineNuxtRouteMiddleware((to, from) => {
-  if (process.client) {
-    const loggedIn = false
-    if (!loggedIn) {
+  if (!identity.isLoggedIn) {
+    if (process.client) {
       let cloudBaseUrl = null
       if (
         location.hostname === 'localhost' ||
         location.hostname === '127.0.0.1'
       ) {
-        cloudBaseUrl = 'http://localhost:5000'
+        cloudBaseUrl =
+          window.location.protocol + '//' + window.location.hostname
+        if (window.location.port) {
+          cloudBaseUrl += ':5000'
+        }
       } else {
         cloudBaseUrl = 'https://cloud.lessborders.com'
       }

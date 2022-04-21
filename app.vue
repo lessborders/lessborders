@@ -11,9 +11,11 @@
 <script lang="ts" setup>
 import { AppSetup } from './utils/app'
 import { ITheme } from './utils/theme'
+import { IToken } from './utils/auth'
 AppSetup()
 const theme = useState<ITheme>('theme.current')
 const locale = useState<string>('locale.setting')
+const token = useState<IToken>('token.setting')
 
 definePageMeta({
   layout: 'page',

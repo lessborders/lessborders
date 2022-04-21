@@ -46,6 +46,9 @@ pages:
     privacy:
       nav: Privacy policy
       title: Data protection declaration of
+loading:
+  app: Loading app...
+  yourdata: Collecting your data...
 errors:
   back: "Take me back!"
   404:

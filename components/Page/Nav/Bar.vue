@@ -18,9 +18,8 @@
 
       <v-app-bar-title>Home</v-app-bar-title>
 
-      <v-btn :to="{ name: 'auth-signin' }" color="red" class="me-1">
-        {{ t('pages.login.nav') }}
-      </v-btn>
+      <PageNavUser />
+
       <v-btn
         size="small"
         icon="fa-regular fa-sliders"
@@ -91,10 +90,8 @@ export interface IMenuItem {
   children?: any
 }
 
-let isLoggedIn = false
-
 const { t } = useLang()
-// const app = useState<IApp>('app')
+
 const menu = computed((): IMenuItem[] => [
   {
     type: 'link',

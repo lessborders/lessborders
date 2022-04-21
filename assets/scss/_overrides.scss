@@ -68,6 +68,7 @@ body {
     .v-banner {
         background: var(--lb-card-bg);
         color: var(--lb-text-color);
+        padding-inline-start: 18px;
     }
     
     .v-chip--size-default .v-avatar {
@@ -113,6 +114,19 @@ body {
     .v-card--variant-contained-flat {
         background-color: var(--lb-card-bg);
         color: inherit;
+    }
+
+    .v-field__append-inner, .v-field__clearable, .v-field__field, .v-field__prepend-inner, .v-input--horizontal .v-input__append {
+        padding-top: var(--lb-input-padding-top);
+    }
+    .v-input__append > i {
+        margin-top: 2px;
+    }
+    .v-field__input {
+        margin-top: -8px;
+    }
+    .v-input__details {
+        text-align: left;
     }
 
     .v-list-item--active > .v-list-item-avatar > .v-avatar {
@@ -192,17 +206,3 @@ ul.list-style-none {
 .clickable i {
     cursor: pointer;
 }
-
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: 3px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #888;
-  }

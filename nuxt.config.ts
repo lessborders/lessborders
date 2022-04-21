@@ -9,6 +9,11 @@ declare module '@nuxt/schema' {
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  publicRuntimeConfig: {
+    baseUrl: process.env.BASE_URL || 'https://localhost:4000',
+    apiBaseUrl: process.env.API_BASE_URL || 'https://localhost:8081',
+    cloudBaseUrl: process.env.CLOUD_BASE_URL || 'https://localhost:5000',
+  },
   // meta
   meta: {
     meta: [
@@ -53,8 +58,8 @@ export default defineNuxtConfig({
 
   // build modules
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@pinia/nuxt',
+    '@nuxtjs/eslint-module',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
   ],

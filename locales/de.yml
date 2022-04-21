@@ -46,3 +46,11 @@ pages:
     privacy:
       nav: Datenschutz
       title: Datenschutzerklärung von
+loading:
+  app: App wird geladen...
+  yourdata: Erfassung Ihrer Daten...
+errors:
+  back: "Nimm mich zurück!"
+  404:
+    title: "Hoppla! Sie sind verloren."
+    description: "Die gesuchte Seite existiert nicht oder wurde verschoben. Keine Sorge - klicken Sie einfach auf die Schaltfläche unten, um zurückzugehen."
