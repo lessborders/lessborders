@@ -30,6 +30,8 @@ if (!route.meta.title) {
   route.meta.title = 'Services for startups, professionals and creators'
 }
 
+let loadingText = t('loading.app')
+
 // console.log(route.meta)
 
 useMeta({
@@ -50,7 +52,7 @@ useMeta({
 export default {
   data() {
     return {
-      loadingText: this.t('loading.app'),
+      loadingText: this.loadingText,
       isLoaded: false,
     }
   },

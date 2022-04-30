@@ -5,7 +5,7 @@
       <template #prepend>
         <NuxtLink to="/">
           <img
-            class="mx-2 logo d-none d-sm-block"
+            class="mx-2 logo invert-dark d-none d-sm-block"
             src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
           />
         </NuxtLink>
@@ -38,7 +38,7 @@
       <v-toolbar>
         <NuxtLink to="/" class="d-flex me-auto">
           <img
-            class="ms-2 me-4 logo"
+            class="ms-2 me-4 logo invert-dark"
             src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
           />
           <v-toolbar-title class="my-auto">LB CLoud</v-toolbar-title>

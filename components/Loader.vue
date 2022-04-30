@@ -1,18 +1,26 @@
 <template>
-  <div v-if="!loaded" class="loader d-flex">
-    <div class="ma-auto pb-10">
-      <v-progress-linear
-        color="red"
-        indeterminate
-        rounded
-        height="6"
-        class="mb-2"
-      ></v-progress-linear>
-      {{ loadingText }}
+  <div>
+    <transition name="fade">
+      <div v-if="!loaded" class="loader d-flex">
+        <div class="ma-auto pb-10 text-center">
+          <img
+            class="mb-2 logo inverted"
+            src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
+          />
+          <v-progress-linear
+            color="red"
+            indeterminate
+            rounded
+            height="6"
+            class="mb-2"
+          ></v-progress-linear>
+          {{ loadingText }}
+        </div>
+      </div>
+    </transition>
+    <div if="loaded">
+      <slot></slot>
     </div>
-  </div>
-  <div v-else>
-    <slot></slot>
   </div>
 </template>
 
@@ -38,6 +46,8 @@ export default {
   position: fixed;
   right: 0;
   top: 0;
-  background: var(--lb-body-bg);
+  background: var(--lb-black);
+  color: #FFFFFF;
+  z-index: 9999;
 }
 </style>

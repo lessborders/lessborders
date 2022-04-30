@@ -1,6 +1,5 @@
 import { ThemeManager } from './theme'
 import { LanguageManager } from './lang'
-import { AuthManager } from './auth'
 
 export interface IApp {
   name: string
@@ -27,13 +26,9 @@ export function AppSetup() {
   // use language manager
   const languageManager = LanguageManager()
 
-  // use language manager
-  const authManager = AuthManager()
-
   return {
     app,
     themeManager,
     languageManager,
-    authManager,
   }
 }
