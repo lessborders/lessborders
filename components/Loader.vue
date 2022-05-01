@@ -47,7 +47,7 @@ export default {
   right: 0;
   top: 0;
   background: var(--lb-black);
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 9999;
 }
 </style>

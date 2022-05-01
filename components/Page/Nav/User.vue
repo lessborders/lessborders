@@ -7,7 +7,7 @@
   >
     {{ $t('pages.login.nav') }}
   </v-btn>
-  <v-avatar v-else color="red" size="small" class="me-3">
+  <v-avatar v-else color="red" size="small">
     <span class="text-white">{{ identity.initials }}</span>
   </v-avatar>
 </template>

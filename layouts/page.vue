@@ -10,12 +10,20 @@
         <main id="page" class="d-flex flex-grow-1 my-auto">
           <slot />
         </main>
-        <slot name="footer">
+        <!--<slot name="footer">
           <PageFooter />
-        </slot>
+        </slot>-->
       </div>
       <slot name="app-after" />
       <div id="app-after"></div>
+
+      <canvas id="unity-canvas" class="unity-canvas flex-grow-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
     </Loader>
   </VApp>
 </template>
@@ -62,7 +70,45 @@ export default {
     if (token.value && !this.identity.isLoggedIn) {
       this.isLoaded = false
       this.identity.login(token.value).then(() => {
-        this.isLoaded = true
+        this.$el.classList.add('isLoggedIn')
+        const canvas = this.$el.querySelector('#unity-canvas')
+        const loadingBar = this.$el.querySelector('#unity-loading-bar')
+        const progressBarFull = this.$el.querySelector(
+          '#unity-progress-bar-full'
+        )
+
+        const buildUrl = '/Build'
+        const loaderUrl = buildUrl + '/test.loader.js'
+        const config = {
+          dataUrl: buildUrl + '/test.data.gz',
+          frameworkUrl: buildUrl + '/test.framework.js.gz',
+          codeUrl: buildUrl + '/test.wasm.gz',
+          streamingAssetsUrl: 'StreamingAssets',
+          companyName: 'DefaultCompany',
+          productName: 'My project (2)',
+          productVersion: '1.0.2',
+        }
+
+        if (canvas) {
+          canvas.style.width = '300px'
+          canvas.style.height = '200px'
+          loadingBar.style.display = 'block'
+
+          const script = document.createElement('script')
+          script.src = loaderUrl
+          script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+              progressBarFull.style.width = 100 * progress + '%'
+            })
+              .then((unityInstance) => {
+                setTimeout(() => {
+                  this.isLoaded = true
+                }, 2000)
+              })
+              .catch((message) => {})
+          }
+          document.body.appendChild(script)
+        }
       })
     }
   },
