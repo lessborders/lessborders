@@ -5,33 +5,11 @@ components:
     change_language: Language
     en: English
     de: Deutsch
-  theme_switcher:
-    theme: Theme
-    change_theme: Theme
-    light: Light
-    dark: Dark
-    system: System
   footer:
     connect_with_us: Connect with us
 pages:
   index:
-    title: Homepage
-  services:
-    nav: Services
-    title: You're in good hands
-    intro: First-class, quality services to help your project get off the ground
-    branding:
-      nav: Branding
-      title: Brand & Marketing
-    design:
-      nav: Design
-      title: Graphics & Design
-    media:
-      nav: Media
-      title: Digital Media
-    websites:
-      nav: Websites
-      title: Web Development
+    title: Home
   login:
     nav: Sign in
   contact:
@@ -50,7 +28,7 @@ loading:
   app: Loading app...
   yourdata: Collecting your data...
 errors:
-  back: "Take me back!"
+  back: 'Take me back!'
   404:
     title: "Uh oh! You're lost."
     description: "The page you are looking for does not exist or has been moved. Don't worry - just click the button below to go back."

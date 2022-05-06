@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div id="footer" class="pt-5 pb-3 text-center text-sm-left">
-      <v-container class="grey lighten-5">
+      <v-container fluid class="grey lighten-5">
         <v-row>
           <v-col cols="12" sm="6" lg="3" class="mb-4">
             <h4 class="mb-3">
@@ -12,7 +12,6 @@
               target="_blank"
               size="small"
               variant="text"
-              color="primary"
               class="mb-2 me-2"
               icon="fa-brands fa-instagram"
             />
@@ -21,7 +20,6 @@
               target="_blank"
               size="small"
               variant="text"
-              color="primary"
               class="mb-2 me-2"
               icon="fa-brands fa-twitter"
             />
@@ -30,7 +28,6 @@
               target="_blank"
               size="small"
               variant="text"
-              color="primary"
               class="mb-2 me-2"
               icon="fa-brands fa-facebook-f"
             />
@@ -70,7 +67,7 @@
       </v-container>
     </div>
     <div id="copyright">
-      <div class="container pt-3 pb-4">
+      <v-container fluid class="pt-3 pb-4">
         <div class="row">
           <div class="col-12 text-center">
             <small>
@@ -78,7 +75,7 @@
             </small>
           </div>
         </div>
-      </div>
+      </v-container>
     </div>
   </footer>
 </template>

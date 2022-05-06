@@ -1,5 +1,4 @@
 <template>
-    <v-container class="py-5">
         <div>
             <h1>{{ $t('pages.legal.terms.title') }}</h1><br>
             <p>
@@ -848,7 +847,6 @@
                 Email: admin@lessborders.com
             </p>
         </div>
-    </v-container>
 </template>
 
 <script lang="ts" setup>

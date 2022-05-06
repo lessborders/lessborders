@@ -5,33 +5,11 @@ components:
     change_language: Sprache
     en: English
     de: Deutsch
-  theme_switcher:
-    theme: Theme
-    change_theme: Theme
-    light: Hell
-    dark: Dunkel
-    system: System
   footer:
     connect_with_us: Finden Sie uns auf
 pages:
   index:
     title: Startseite
-  services:
-    nav: Leistungen
-    title: Sie sind in guten Händen
-    intro: Erstklassigen, qualitativ hochwertigen Dienstleistungen, um Ihr Projekt auf den Weg zu bringen
-    branding:
-      nav: Branding
-      title: Marketing & Branding
-    design:
-      nav: Design
-      title: Design
-    media:
-      nav: Medien
-      title: Digitale Medien
-    websites:
-      nav: Webseiten
-      title: Webentwicklung
   login:
     nav: Einloggen
   contact:
@@ -41,7 +19,7 @@ pages:
     nav: Impressum
     title: Impressum
     terms:
-      nav:  AGB
+      nav: AGB
       title: Allgemeine Geschäftsbediungen (AGB)
     privacy:
       nav: Datenschutz
@@ -50,7 +28,7 @@ loading:
   app: App wird geladen...
   yourdata: Erfassung Ihrer Daten...
 errors:
-  back: "Nimm mich zurück!"
+  back: 'Nimm mich zurück!'
   404:
-    title: "Hoppla! Sie sind verloren."
-    description: "Die gesuchte Seite existiert nicht oder wurde verschoben. Keine Sorge - klicken Sie einfach auf die Schaltfläche unten, um zurückzugehen."
+    title: 'Hoppla! Sie sind verloren.'
+    description: 'Die gesuchte Seite existiert nicht oder wurde verschoben. Keine Sorge - klicken Sie einfach auf die Schaltfläche unten, um zurückzugehen.'

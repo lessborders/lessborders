@@ -1,23 +1,20 @@
 :root {
   --lb-primary: var(--lb-red);
   --lb-primary-highlight: var(--lb-red-highlight);
-  
-  --lb-link-color: var(--lb-red);
+
+  --lb-link-color: var(--lb-primary);
 }
 
 $lb-colors: (
-  "primary": --lb-primary,
-  "light": --lb-light,
-  "red": --lb-red,
-  "purple": --lb-purple,
-  "blue": --lb-blue,
-  "green": --lb-green,
-  "orange": --lb-orange,
-  "black": --lb-black,
-  "text": --lb-text-color,
-  "body": --lb-text-color,
-  "transparent": transparent
+  'primary': --lb-primary,
+  'light': --lb-light,
+  'red': --lb-red,
+  'purple': --lb-purple,
+  'blue': --lb-blue,
+  'green': --lb-green,
+  'orange': --lb-orange,
+  'black': --lb-black,
+  'text': --lb-text-color,
+  'body': --lb-text-color,
+  'transparent': transparent,
 );
-
-//fontawesome
-$fa-font-path: "https://static.lessborders.com/assets/fonts/fontawesome";

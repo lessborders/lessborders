@@ -1,12 +1,5 @@
 <template>
-  <div class="page-container my-auto">
-    <h2>Lottery</h2>
-    <div class="grid cols-4">
-      <v-card>
-        <v-card-text></v-card-text>
-      </v-card>
-    </div>
-  </div>
+  <div class="page-container my-auto"></div>
 </template>
 
 <script lang="ts" setup>

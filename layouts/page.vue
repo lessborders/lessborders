@@ -8,7 +8,9 @@
           <PageNavBar />
         </slot>
         <main id="page" class="d-flex flex-grow-1 my-auto">
-          <slot />
+          <v-container fluid class="py-5">
+            <slot />
+          </v-container>
         </main>
         <slot name="footer">
           <PageFooter />

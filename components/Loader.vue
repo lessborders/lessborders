@@ -3,10 +3,12 @@
     <transition name="fade">
       <div v-if="!loaded" class="loader d-flex">
         <div class="ma-auto pb-10 text-center">
-          <img
-            class="mb-2 logo inverted"
-            src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
-          />
+          <div class="logo mb-3">
+            <img
+              class="inverted"
+              src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
+            />
+          </div>
           <v-progress-linear
             color="red"
             indeterminate
@@ -47,7 +49,7 @@ export default {
   right: 0;
   top: 0;
   background: var(--lb-black);
-  color: #FFFFFF;
+  color: #ffffff;
   z-index: 9999;
 }
 </style>

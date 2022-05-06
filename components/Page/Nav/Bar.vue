@@ -2,57 +2,25 @@
   <div>
     <!-- Navbar -->
     <v-app-bar style="width: 100%">
-      <template #prepend>
-        <NuxtLink to="/">
-          <img
-            class="mx-2 logo invert-dark d-none d-sm-block"
-            src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
-          />
-        </NuxtLink>
-        <v-app-bar-nav-icon
-          size="small"
-          icon="fa-regular fa-bars"
-          @click.stop="mainMenu = !mainMenu"
-        ></v-app-bar-nav-icon>
-      </template>
-
-      <v-app-bar-title>Home</v-app-bar-title>
-
-      <PageNavUser />
-
-      <v-btn
-        size="small"
-        icon="fa-regular fa-sliders"
-        @click.stop="preferenceMenu = !preferenceMenu"
-      />
-    </v-app-bar>
-
-    <!-- Main Menu -->
-    <v-navigation-drawer
-      v-model="mainMenu"
-      temporary
-      rounded
-      position="left"
-      width="380"
-    >
-      <v-toolbar>
-        <NuxtLink to="/" class="d-flex me-auto">
-          <img
-            class="ms-2 me-4 logo invert-dark"
-            src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
-          />
-          <v-toolbar-title class="my-auto">LB CLoud</v-toolbar-title>
-        </NuxtLink>
-        <v-btn
-          size="small"
-          icon="fa-regular fa-times"
-          @click.stop="mainMenu = !mainMenu"
-        ></v-btn>
-      </v-toolbar>
-      <v-list>
+      <NuxtLink to="/" class="logo my-auto me-2">
+        <img
+          class="inverted"
+          src="https://static.lessborders.com/apps/lessborders/lessborders_logo.svg"
+        />
+      </NuxtLink>
+      <div class="nav-container">
         <PageNavLink v-for="(item, i) in menu" :key="i" :item="item" />
-      </v-list>
-    </v-navigation-drawer>
+      </div>
+      <div class="ms-auto">
+        <PageNavUser />
+
+        <!--<v-btn
+          size="small"
+          icon="fa-regular fa-sliders"
+          @click.stop="preferenceMenu = !preferenceMenu"
+        />-->
+      </div>
+    </v-app-bar>
 
     <!-- Preference Menu -->
     <v-navigation-drawer
@@ -95,23 +63,21 @@ const { t } = useLang()
 const menu = computed((): IMenuItem[] => [
   {
     type: 'link',
-    text: t('pages.services.branding.nav'),
-    route: { name: 'services-branding' },
+    text: t('pages.index.title'),
+    route: { name: 'index' },
+    icon: 'fa-regular fa-home',
   },
   {
     type: 'link',
-    text: t('pages.services.websites.nav'),
-    route: { name: 'services-websites' },
+    text: t('pages.index.title'),
+    route: { name: 'search' },
+    icon: 'fa-regular fa-cards',
   },
   {
     type: 'link',
-    text: t('pages.services.design.nav'),
-    route: { name: 'services-design' },
-  },
-  {
-    type: 'link',
-    text: t('pages.services.media.nav'),
-    route: { name: 'services-media' },
+    text: t('pages.index.title'),
+    route: { name: 'store' },
+    icon: 'fa-regular fa-store',
   },
 ])
 </script>
