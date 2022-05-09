@@ -1,0 +1,141 @@
+// app global css in SCSS form
+@import url(https://static.lessborders.com/assets/vendor/fontawesome/css/all.min.css);
+@import url(https://static.lessborders.com/assets/css/root.css);
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: var(--lb-background);
+  color: var(--lb-text);
+
+  .q-icon.fa-regular,
+  .q-icon.fa-solid {
+    font-size: inherit;
+  }
+
+  .q-chip__icon--left {
+    margin-right: 0.5rem;
+  }
+  .q-chip__icon--right {
+    margin-left: 0.5rem;
+  }
+
+  .q-avatar {
+    .top {
+      position: absolute;
+      top: -30%;
+    }
+  }
+
+  .q-layout,
+  #q-app {
+    width: auto;
+  }
+
+  .q-toolbar {
+    a {
+      color: var(--lb-text);
+
+      .q-btn {
+        background: var(--lb-dark);
+
+        .q-btn__content {
+          opacity: 0.5;
+        }
+      }
+
+      &:hover,
+      &.router-link-active {
+        .q-btn {
+          .q-btn__content {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.router-link-active {
+        .main-btn {
+        }
+      }
+
+      .main-btn {
+        margin-top: -1.5rem;
+        background: var(--lb-light) !important;
+      }
+    }
+  }
+
+  .q-drawer {
+    background: var(--lb-background);
+  }
+
+  .q-footer {
+    position: fixed;
+  }
+}
+
+#stats {
+  position: fixed;
+  right: 0.75rem;
+  top: 0.75rem;
+  z-index: 2;
+}
+
+@media only screen and (max-height: 319px) and (orientation: landscape) {
+  body {
+    padding-right: 64px;
+
+    #stats {
+      right: 5rem;
+    }
+
+    .q-footer {
+      left: auto;
+      top: 0;
+      display: flex;
+      .q-toolbar {
+        flex-direction: column;
+
+        .main-btn {
+          margin-top: 0;
+          margin-left: -1.5rem;
+        }
+      }
+    }
+  }
+}
+
+a:not(.q-btn) {
+  color: var(--lb-primary);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
+:-moz-any-link {
+  text-decoration: none;
+}
+
+:any-link {
+  text-decoration: none;
+}
+
+.numberchange-enter-active {
+  animation: numberchange 1.5s;
+}
+
+.numberchanger {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes numberchange {
+  0% {
+    opacity: 1;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-75%);
+  }
+}
