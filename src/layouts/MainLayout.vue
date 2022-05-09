@@ -50,12 +50,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Cookies } from 'quasar'
 import { useUser } from '../stores/user'
 import UserStats from '../components/UserStats.vue'
 
 const user = useUser()
-const cookies = process.env.SERVER ? Cookies.parseSSR(ssrContext) : Cookies
 
 const menuOpen = ref(false)
 
